@@ -11,13 +11,6 @@ function popState() {
 
 function User() {
     let username = prompt("Enter the Username :");
-
-    // if (username) { 
-    // } else {
-    //     alert("Enter username");
-    //     return;
-    // }
-
     if (username === 'Punjab' || username === 'Haryana' || username === 'Chandigarh') {
         let pass = prompt("Enter the password : ");
         console.log(`Username entered : ${username}`);
