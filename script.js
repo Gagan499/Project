@@ -11,13 +11,19 @@ function popState() {
 
 function User() {
     let username = prompt("Enter the Username :");
+
+    // if (username) { 
+    // } else {
+    //     alert("Enter username");
+    //     return;
+    // }
+
     if (username === 'Punjab' || username === 'Haryana' || username === 'Chandigarh') {
         let pass = prompt("Enter the password : ");
         console.log(`Username entered : ${username}`);
-        if (pass === 'Punjab' || pass === 'Chandigarh') {
+        if (pass === 'Punjab') {
             window.location.href = 'https://maps.app.goo.gl/kLc4nBPLYDbdXvoE9';
             console.log(`correct Username and Password entered : ${username} , ${pass}`);
-            return { username, pass };
         }
         else if(pass === 'Haryana'){
             console.log(`correct Username and Password entered : ${username} , ${pass}`);
