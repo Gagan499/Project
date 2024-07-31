@@ -1,13 +1,9 @@
 function popState() {
     let state = prompt("Enter the state");
-    if (state) {
-        console.log(`You entered: ${state}`);
-    } else {
-        console.log("No state entered.");
-    }
+    console.log(`You entered: ${state}`);
     if (state === 'Punjab' || state === 'Haryana' || state === 'Chandigarh') {
-        User(state);
-        all(state);
+        let userCredentials = User();
+        all(state, userCredentials.username, userCredentials.pass);
     }
     else {
         alert("Acess Deined");
@@ -16,14 +12,15 @@ function popState() {
 
 function User() {
     let username = prompt("Enter the Username :");
-    let pass = prompt("Enter the password : ");
     if (username === 'Punjab' || username === 'Haryana' || username === 'Chandigarh') {
+        let pass = prompt("Enter the password : ");
+        console.log(`Username entered : ${username}`);
         if (pass === 'Punjab' || pass === 'Haryana' || pass === 'Chandigarh') {
             console.log(`correct Username and Password entered : ${username} , ${pass}`);
+            return { username, pass };
         }
         else {
             alert(`Incoorect password enterd : ${pass}`)
-            console.log(`Username entered : ${username}`);
             console.log(`Incorrect Password entered : ${pass}`);
         }
     }
@@ -33,8 +30,8 @@ function User() {
     }
 }
 
-function all(state) {
-    if (state === 'Punjab') {
+function all(state, username, pass) {
+    if (state === 'Punjab' || username === 'Punjab' || pass === 'Punjab') {
         window.location.href = 'https://maps.app.goo.gl/kLc4nBPLYDbdXvoE9';
     }
     else if (state === 'Haryana') {
