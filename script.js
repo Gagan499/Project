@@ -17,18 +17,18 @@ function popState() {
 function User() {
     let username = prompt("Enter the Username :");
     let pass = prompt("Enter the password : ");
-    // console.log(`You entereed username : ${username}`);
-    // console.log(`You entereed password : ${pass}`);
     if (username === 'Punjab' || username === 'Haryana' || username === 'Chandigarh') {
         if (pass === 'Punjab' || pass === 'Haryana' || pass === 'Chandigarh') {
             console.log(`correct Username and Password entered : ${username} , ${pass}`);
         }
         else {
+            alert(`Incoorect password enterd : ${pass}`)
             console.log(`Username entered : ${username}`);
             console.log(`Incorrect Password entered : ${pass}`);
         }
     }
     else {
+        alert(`Incorrect Username Entered  ${username}`)
         console.log(`Incorrect Username entered : ${username}`);
     }
 }
